@@ -1,0 +1,11 @@
+(block elk_kibana_01_pod_kibana_01
+    (blockinherit container)
+    (blockinherit restricted_net_container)
+    (allow process wap_wsp_port_t ( tcp_socket ( name_connect )))
+    (allow process tor_port_t ( tcp_socket ( name_connect )))
+    (allow process unreserved_port_t ( tcp_socket ( name_bind )))
+    (allow process unreserved_port_t ( tcp_socket ( name_connect )))
+    (allow process user_home_t ( dir ( getattr ioctl lock open read search )))
+    (allow process user_home_t ( file ( getattr ioctl lock open read )))
+    (allow process user_home_t ( sock_file ( getattr open read )))
+)

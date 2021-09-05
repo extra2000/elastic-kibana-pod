@@ -1,0 +1,12 @@
+server.name: kibana-01
+server.host: 'elk-kibana-01-pod.elknet'
+server.ssl.enabled: true
+server.ssl.keystore.path: "/usr/share/kibana/config/kibana-01.p12"
+elasticsearch.hosts:
+  - https://elk-es-coord-01-pod.elknet:9200
+elasticsearch.username: kibana_system
+elasticsearch.password: abcde12345
+elasticsearch.ssl.verificationMode: full
+elasticsearch.ssl.certificateAuthorities:
+  - config/elastic-ca.pem
+xpack.monitoring.ui.container.elasticsearch.enabled: false

@@ -1,0 +1,13 @@
+server.name: kibana-01
+server.host: 'SERVER_IP'
+server.publicBaseUrl: 'https://SERVER_IP:5601'
+server.ssl.enabled: true
+server.ssl.keystore.path: "/usr/share/kibana/config/kibana-01.p12"
+elasticsearch.hosts:
+  - https://ES-COORD-01-IP-ADDRESS:9200
+elasticsearch.username: kibana_system
+elasticsearch.password: abcde12345
+elasticsearch.ssl.verificationMode: full
+elasticsearch.ssl.certificateAuthorities:
+  - config/elastic-ca.pem
+xpack.monitoring.ui.container.elasticsearch.enabled: false
