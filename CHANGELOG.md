@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/extra2000/elastic-kibana-pod/compare/v1.0.0...v1.1.0) (2021-10-25)
+
+
+### Features
+
+* **kibana:** upgrade from version `7.15.0` to `7.15.1` ([bc49cee](https://github.com/extra2000/elastic-kibana-pod/commit/bc49cee8f261f62f726fdde26ef282066b702ba4))
+
+
+### Documentations
+
+* **configs:** add missing `server.publicBaseUrl` ([a9f0f83](https://github.com/extra2000/elastic-kibana-pod/commit/a9f0f83726dca44ee17604a0dc2a7eb654651ba6))
+
 ## 1.0.0 (2021-10-23)
 
 
