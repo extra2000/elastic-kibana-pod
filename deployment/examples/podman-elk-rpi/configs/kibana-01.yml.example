@@ -1,5 +1,6 @@
 server.name: kibana-01
 server.host: 'elk-kibana-01-pod.elknet'
+server.publicBaseUrl: 'https://SERVER_IP:5601'
 server.ssl.enabled: true
 server.ssl.keystore.path: "/usr/share/kibana/config/kibana-01.p12"
 elasticsearch.hosts:
