@@ -1,5 +1,18 @@
 # Changelog
 
+### [1.1.1](https://github.com/extra2000/elastic-kibana-pod/compare/v1.1.0...v1.1.1) (2021-11-02)
+
+
+### Documentations
+
+* **configs:** add more default configurations ([ba04d12](https://github.com/extra2000/elastic-kibana-pod/commit/ba04d12aed1694249d53186ad7e4a9612943a016))
+* **configs:** rename `xpack.monitoring.` to `monitoring.` ([ec53b9a](https://github.com/extra2000/elastic-kibana-pod/commit/ec53b9a86ba7b6d73cb026cd92a23d8f6b46b705))
+
+
+### Fixes
+
+* **dockerfile:** add missing `openssl` package ([edbeeb7](https://github.com/extra2000/elastic-kibana-pod/commit/edbeeb7d25a6970ad238aa61d6859d12b8bb0453))
+
 ## [1.1.0](https://github.com/extra2000/elastic-kibana-pod/compare/v1.0.0...v1.1.0) (2021-10-25)
 
 
