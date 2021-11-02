@@ -10,4 +10,9 @@ elasticsearch.password: abcde12345
 elasticsearch.ssl.verificationMode: full
 elasticsearch.ssl.certificateAuthorities:
   - config/elastic-ca.pem
+monitoring: enable
 monitoring.ui.container.elasticsearch.enabled: false
+monitoring.cluster_alerts.email_notifications.email_address: myname@example.com
+xpack.reporting.roles.enabled: false
+xpack.security.session.idleTimeout: 1h
+xpack.security.session.lifespan: 30d
