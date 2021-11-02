@@ -1,1 +1,5 @@
 FROM docker.elastic.co/kibana/kibana:7.15.1-amd64
+
+USER root
+RUN yum install -y openssl
+USER kibana
