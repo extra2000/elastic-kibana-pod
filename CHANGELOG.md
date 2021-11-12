@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/extra2000/elastic-kibana-pod/compare/v1.1.1...v1.2.0) (2021-11-12)
+
+
+### Features
+
+* **kibana:** update version from `7.15.1` to `7.15.2` ([c420851](https://github.com/extra2000/elastic-kibana-pod/commit/c4208510263b7d45e4f59be4474e9bfdbb590c35))
+
 ### [1.1.1](https://github.com/extra2000/elastic-kibana-pod/compare/v1.1.0...v1.1.1) (2021-11-02)
 
 
