@@ -16,7 +16,6 @@ Build our Kibana image:
 
 .. code-block:: bash
 
-    sudo podman build -t extra2000/elastic/kibana -f Dockerfile.amd64 .
     podman build -t extra2000/elastic/kibana -f Dockerfile.amd64 .
 
 Get CA from ``elastic-elasticsearch-pod`` Project
@@ -142,7 +141,7 @@ Deploy ``kibana-01``
 
 .. code-block:: bash
 
-    sudo podman play kube --configmap configmaps/kibana-01.yaml --seccomp-profile-root ./seccomp kibana-01-pod.yaml
+    podman play kube --configmap configmaps/kibana-01.yaml --seccomp-profile-root ./seccomp kibana-01-pod.yaml
 
 Kibana is now accessible at https://SERVER_IP:5601. Login with username ``elastic`` and password ``abcde12345``.
 
@@ -150,9 +149,10 @@ Generate ``systemd`` files and enable on ``boot``:
 
 .. code-block:: bash
 
-    cd /etc/systemd/system/
-    sudo podman generate systemd --files --name kibana-01-pod
-    sudo systemctl enable pod-kibana-01-pod.service container-kibana-01-pod-kibana-01.service
+    mkdir -pv ~/.config/systemd/user
+    cd ~/.config/systemd/user
+    podman generate systemd --files --name kibana-01-pod
+    systemctl --user enable pod-kibana-01-pod.service container-kibana-01-pod-kibana-01.service
 
 Create Snapshots
 ----------------

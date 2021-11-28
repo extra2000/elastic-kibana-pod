@@ -16,7 +16,6 @@ Build our Kibana image:
 
 .. code-block:: bash
 
-    sudo podman build -t extra2000/elastic/kibana -f Dockerfile.amd64 .
     podman build -t extra2000/elastic/kibana -f Dockerfile.amd64 .
 
 Create ``elknet`` podman network from ``elastic-elasticsearch-pod`` project.
@@ -144,7 +143,7 @@ Deploy ``kibana-01``
 
 .. code-block:: bash
 
-    sudo podman play kube --network elknet --configmap configmaps/kibana-01.yaml --seccomp-profile-root ./seccomp elk-kibana-01-pod.yaml
+    podman play kube --network elknet --configmap configmaps/kibana-01.yaml --seccomp-profile-root ./seccomp elk-kibana-01-pod.yaml
 
 Kibana is now accessible at https://127.0.0.1:5601. Login with username ``elastic`` and password ``abcde12345``.
 
