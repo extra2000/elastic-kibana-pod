@@ -69,11 +69,11 @@ Create pod file:
 Creating HTTP Certificate
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ensure the ``./secrets`` directory is labeled as ``container_file_t``:
+Ensure the ``./secrets`` and ``./configs`` directories are labeled as ``container_file_t``:
 
 .. code-block:: bash
 
-    chcon -R -v -t container_file_t ./secrets
+    chcon -R -v -t container_file_t ./secrets ./configs
 
 Create HTTP certificate:
 
