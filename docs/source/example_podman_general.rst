@@ -6,6 +6,15 @@ Example how to deploy a Kibana instance for general purpose using Podman.
 Getting Started
 ---------------
 
+Clone repository and then ``cd`` into the project's root:
+
+.. code-block:: bash
+
+    mkdir ~/extra2000
+    cd ~/extra2000
+    git clone https://github.com/extra2000/elastic-kibana-pod.git
+    cd elastic-kibana-pod
+
 ``cd`` into ``elastic-kibana-pod/deployment/examples/``:
 
 .. code-block:: bash
