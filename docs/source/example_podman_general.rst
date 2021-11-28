@@ -133,6 +133,21 @@ Create ``./secrets/kibana-01-pod.keystore`` file to store certificate passwords:
 
     The ``openssl rand -hex 32`` is a trick to generate random string.
 
+Distribute Secrets
+~~~~~~~~~~~~~~~~~~
+
+Copy the created certificates and keystore to the node:
+
+.. code-block:: bash
+
+    scp -r -P 22 secrets/certificate-bundle secrets/kibana-01.keystore secrets/elastic-ca.pem USER@KIBANA-01:extra2000/elastic-kibana-pod/deployment/examples/podman-general/secrets/
+
+On the node, don't forget to label the ``secrets`` directory as ``container_file_t``:
+
+.. code-block:: bash
+
+    chcon -R -v -t container_file_t ./secrets
+
 Load SELinux Security Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
