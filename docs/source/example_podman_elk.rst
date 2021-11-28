@@ -53,6 +53,12 @@ Create Config Files
     cp -v configmaps/kibana-01.yaml{.example,}
     cp -v configs/kibana-01.yml{.example,}
 
+Create pod file:
+
+.. code-block:: bash
+
+    cp -v elk-kibana-01-pod.yaml{.example,}
+
 Creating HTTP Certificate
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 

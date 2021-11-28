@@ -6,3 +6,5 @@ configmaps/*
 
 configs/*
 !configs/*.example
+
+elk-kibana-01-pod.yaml
