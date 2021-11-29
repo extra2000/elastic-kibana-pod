@@ -1,5 +1,5 @@
-Example Deployment for General Purpose using Podman
-===================================================
+Deployment for General Purpose
+==============================
 
 Example how to deploy a Kibana instance for general purpose using Podman.
 

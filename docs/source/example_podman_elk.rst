@@ -1,7 +1,7 @@
-Example Deployment for ELK using Podman
-=======================================
+Deployment on same ES Host
+==========================
 
-Example how to deploy a small Kibana instance for ELK using Podman.
+Example how to deploy a Kibana instance on the same Elasticsearch host using Podman.
 
 Getting Started
 ---------------
