@@ -114,6 +114,12 @@ Extract the certificate archive:
 
     unzip ./secrets/certificate-bundle.zip -d ./secrets/certificate-bundle
 
+Verify the ``kibana-01.p12`` certificate:
+
+.. code-block:: bash
+
+    openssl pkcs12 -in ./secrets/certificate-bundle/kibana-01/kibana-01.p12 -nodes | openssl x509 -noout -text | less
+
 Creating Keystore
 ~~~~~~~~~~~~~~~~~
 
