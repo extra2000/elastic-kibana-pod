@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.1](https://github.com/extra2000/elastic-kibana-pod/compare/v2.0.0...v2.0.1) (2021-12-16)
+
+
+### Documentations
+
+* **general-deployment:** add instruction to configure MinIO ([5213e87](https://github.com/extra2000/elastic-kibana-pod/commit/5213e87e478363713297e4d3f8a6cbaf9bb71cf6))
+
 ## [2.0.0](https://github.com/extra2000/elastic-kibana-pod/compare/v1.2.0...v2.0.0) (2021-11-29)
 
 
