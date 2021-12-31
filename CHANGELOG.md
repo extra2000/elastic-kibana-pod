@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.0.0](https://github.com/extra2000/elastic-kibana-pod/compare/v2.0.1...v3.0.0) (2021-12-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* **monitoring:** Stack Monitoring for Kibana with self-monitoring is no longer works. Use Metricbeat to send Kibana metrics.
+
+### Features
+
+* **dockerfile:** upgrade Kibana from `7.15.2` to `7.16.2` ([91b9752](https://github.com/extra2000/elastic-kibana-pod/commit/91b975292e466f833a9c48bc067f9b5b774d6a2b))
+
+
+### Fixes
+
+* **monitoring:** remove deprecated `monitoring.enabled` setting ([50fc65b](https://github.com/extra2000/elastic-kibana-pod/commit/50fc65bbd41a062b3d72f17a2b7b1295dcbb493c))
+
 ### [2.0.1](https://github.com/extra2000/elastic-kibana-pod/compare/v2.0.0...v2.0.1) (2021-12-16)
 
 
