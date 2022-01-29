@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.1.0](https://github.com/extra2000/elastic-kibana-pod/compare/v3.0.0...v3.1.0) (2022-01-29)
+
+
+### Features
+
+* **dockerfile:** upgrade Kibana from `7.16.2` to `7.16.3` ([b352a9f](https://github.com/extra2000/elastic-kibana-pod/commit/b352a9fd2ff777466215ca751021aec89fb1dba5))
+
+
+### Documentations
+
+* **logo:** remove logo ([7345e6a](https://github.com/extra2000/elastic-kibana-pod/commit/7345e6a05c5476801cbed66bf4312594e36028ce))
+
 ## [3.0.0](https://github.com/extra2000/elastic-kibana-pod/compare/v2.0.1...v3.0.0) (2021-12-31)
 
 
