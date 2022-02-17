@@ -1,5 +1,1 @@
 FROM docker.elastic.co/kibana/kibana:7.17.0-arm64
-
-USER root
-RUN yum install -y openssl
-USER kibana
