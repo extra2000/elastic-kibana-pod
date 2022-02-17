@@ -1,5 +1,22 @@
 # Changelog
 
+## [3.2.0](https://github.com/extra2000/elastic-kibana-pod/compare/v3.1.0...v3.2.0) (2022-02-17)
+
+
+### Features
+
+* **dockerfile:** upgrade Kibana from `7.16.3` to `7.17.0` ([036ed50](https://github.com/extra2000/elastic-kibana-pod/commit/036ed50992e5fde52d6b34ec3ccbe1182cd0bf1e))
+
+
+### Code Refactoring
+
+* **dockerfile:** remove `openssl` installations since Kibana `7.17` and above are using Ubuntu image instead of CentOS ([ace03c1](https://github.com/extra2000/elastic-kibana-pod/commit/ace03c1cc99a5364e95cec1f02506254ffa24c84))
+
+
+### Documentations
+
+* **deployments:** improve explanations for MinIO instructions ([7293ffd](https://github.com/extra2000/elastic-kibana-pod/commit/7293ffd8f4440ac918195555a48dd36dab0d53b3))
+
 ## [3.1.0](https://github.com/extra2000/elastic-kibana-pod/compare/v3.0.0...v3.1.0) (2022-01-29)
 
 
