@@ -249,7 +249,7 @@ Create a new user with the following options:
 Create MinIO Service Account for Elasticsearch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create a new service account for the user ``extra2000-es-admin``:
+Logout from root account and re-login as ``extra2000-es-admin``. Then, create a new service account for the user ``extra2000-es-admin``:
 
 * Customize Credentials: ``OFF``
 * Restrict with policy: ``OFF``
