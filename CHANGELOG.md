@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.3.0](https://github.com/extra2000/elastic-kibana-pod/compare/v3.2.0...v3.3.0) (2022-02-20)
+
+
+### Features
+
+* **dockerfiles:** upgrade Kibana from `7.17.0` to `8.0.0` ([83e32eb](https://github.com/extra2000/elastic-kibana-pod/commit/83e32ebe24042c2a96d7b2445712919ec08be1eb))
+
+
+### Code Refactoring
+
+* **deployments:** remove `podman-elk-rpi` deployment ([a6e8f12](https://github.com/extra2000/elastic-kibana-pod/commit/a6e8f12bde6bbf308270aee1d79ef1fc9baa6639))
+* **deployments:** remove `podman-elk` deployment ([e2f8bea](https://github.com/extra2000/elastic-kibana-pod/commit/e2f8beab2b35426586d9d57caca12b35078d66d7))
+
 ## [3.2.0](https://github.com/extra2000/elastic-kibana-pod/compare/v3.1.0...v3.2.0) (2022-02-17)
 
 
