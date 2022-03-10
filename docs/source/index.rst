@@ -10,4 +10,5 @@ Welcome to Elastic Kibana Pod's documentation!
   legal_notices
   introduction
   host_preparations
-  example_podman_general
+  deployment_production
+  minio
