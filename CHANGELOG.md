@@ -1,5 +1,27 @@
 # Changelog
 
+## [4.0.0](https://github.com/extra2000/elastic-kibana-pod/compare/v3.3.0...v4.0.0) (2022-03-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deployments:** deployment directory has been reorganized
+
+### Features
+
+* **dockerfiles:** update `Kibana` from `8.0.0` to `8.0.1` ([1032076](https://github.com/extra2000/elastic-kibana-pod/commit/1032076d5923b25ce046ced6ad4b4f58ad8bbb86))
+
+
+### Code Refactoring
+
+* **deployments:** reorganize ([e045483](https://github.com/extra2000/elastic-kibana-pod/commit/e04548389d27aeeaa421fb70c0c7df150a8591fa))
+* **docs:** reorganize documentations ([d458f65](https://github.com/extra2000/elastic-kibana-pod/commit/d458f6577d8411aea9fc59c11826d0ad7f2298aa))
+
+
+### Continuous Integrations
+
+* **AppVeyor:** update workdir path ([dded40b](https://github.com/extra2000/elastic-kibana-pod/commit/dded40b812137319c0a592c725473dddb9a4ed79))
+
 ## [3.3.0](https://github.com/extra2000/elastic-kibana-pod/compare/v3.2.0...v3.3.0) (2022-02-20)
 
 
