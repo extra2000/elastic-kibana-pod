@@ -2,15 +2,15 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    app: kibana-01-pod
-  name: kibana-01-pod
+    app: kibana-pod
+  name: kibana-pod
   annotations:
     seccomp.security.alpha.kubernetes.io/pod: localhost/default.json
 spec:
   restartPolicy: OnFailure
   hostNetwork: true
   containers:
-  - name: kibana-01
+  - name: srv01
     image: localhost/extra2000/elastic/kibana
     securityContext:
       allowPrivilegeEscalation: false
@@ -22,7 +22,7 @@ spec:
         - CAP_NET_RAW
         - CAP_AUDIT_WRITE
       seLinuxOptions:
-        type: kibana_01_pod_kibana_01.process
+        type: kibana_podman.process
     resources:
       requests:
         memory: 1000Mi
@@ -34,31 +34,31 @@ spec:
     - name: NODE_OPTIONS
       valueFrom:
         configMapKeyRef:
-          name: kibana-01-configmap
+          name: kibana-configmap
           key: node_options
     volumeMounts:
     - mountPath: /usr/share/kibana/config/kibana.yml
-      name: kibana-01-yml
+      name: kibana-yml
       readOnly: true
     - mountPath: /usr/share/kibana/config/elastic-ca.pem
-      name: kibana-01-ssl-ca
+      name: kibana-ssl-ca
       readOnly: true
-    - mountPath: /usr/share/kibana/config/kibana-01.p12
-      name: kibana-01-ssl-http
+    - mountPath: /usr/share/kibana/config/kibana.p12
+      name: kibana-ssl-http
       readOnly: true
     - mountPath: /usr/share/kibana/config/kibana.keystore
-      name: kibana-01-keystore
+      name: kibana-keystore
       readOnly: true
   volumes:
-  - name: kibana-01-yml
+  - name: kibana-yml
     hostPath:
-      path: ./configs/kibana-01.yml
-  - name: kibana-01-ssl-ca
+      path: ./configs/kibana.yml
+  - name: kibana-ssl-ca
     hostPath:
       path: ./secrets/elastic-ca.pem
-  - name: kibana-01-ssl-http
+  - name: kibana-ssl-http
     hostPath:
-      path: ./secrets/certificate-bundle/kibana-01/kibana-01.p12
-  - name: kibana-01-keystore
+      path: ./secrets/certificate-bundle/kibana/kibana.p12
+  - name: kibana-keystore
     hostPath:
-      path: ./secrets/kibana-01.keystore
+      path: ./secrets/kibana.keystore
