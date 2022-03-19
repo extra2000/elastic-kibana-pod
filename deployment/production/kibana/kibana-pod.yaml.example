@@ -37,6 +37,8 @@ spec:
           name: kibana-configmap
           key: node_options
     volumeMounts:
+    - mountPath: /usr/share/kibana/config
+      name: kibana-config
     - mountPath: /usr/share/kibana/config/kibana.yml
       name: kibana-yml
       readOnly: true
@@ -48,9 +50,6 @@ spec:
       readOnly: true
     - mountPath: /usr/share/kibana/config/kibana.key
       name: kibana-ssl-http-key
-      readOnly: true
-    - mountPath: /usr/share/kibana/config/kibana.keystore
-      name: kibana-keystore
       readOnly: true
   volumes:
   - name: kibana-yml
@@ -65,6 +64,6 @@ spec:
   - name: kibana-ssl-http-key
     hostPath:
       path: ./secrets/kibana.key
-  - name: kibana-keystore
-    hostPath:
-      path: ./secrets/kibana.keystore
+  - name: kibana-config
+    persistentVolumeClaim:
+      claimName: kibana-config

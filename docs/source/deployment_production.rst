@@ -53,35 +53,20 @@ Create pod file:
 Creating Keystore
 ~~~~~~~~~~~~~~~~~
 
-Create ``./secrets/kibana-pod.keystore`` file to store certificate passwords:
+Create ``kibana-config`` volume and then create keystore into the volume:
 
 .. code-block:: bash
 
-    podman run -it --rm -v ./secrets:/tmp/secrets:rw --user root --entrypoint bash localhost/extra2000/elastic/kibana
+    podman volume create kibana-config
+    podman run -it --rm -v kibana-config:/usr/share/kibana/config:rw --entrypoint=bash localhost/extra2000/elastic/kibana
     ./bin/kibana-keystore create
     openssl rand -hex 32 | ./bin/kibana-keystore add xpack.encryptedSavedObjects.encryptionKey
     openssl rand -hex 32 | ./bin/kibana-keystore add xpack.security.encryptionKey
     openssl rand -hex 32 | ./bin/kibana-keystore add xpack.reporting.encryptionKey
-    cp -v /usr/share/kibana/config/kibana.keystore /tmp/secrets/kibana.keystore
 
 .. note::
 
     The ``openssl rand -hex 32`` is a trick to generate random string.
-
-Distribute Secrets
-~~~~~~~~~~~~~~~~~~
-
-Copy the created certificates and keystore to the node:
-
-.. code-block:: bash
-
-    scp -r -P 22 secrets/kibana.keystore USER@kibana:extra2000/elastic-kibana-pod/deployment/production/kibana/secrets/
-
-On the node, don't forget to label the ``secrets`` directory as ``container_file_t``:
-
-.. code-block:: bash
-
-    chcon -R -v -t container_file_t ./secrets
 
 Load SELinux Security Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
