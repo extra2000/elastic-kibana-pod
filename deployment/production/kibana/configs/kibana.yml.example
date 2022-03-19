@@ -2,14 +2,14 @@ server.name: kibana
 server.host: 'SERVER_IP'
 server.publicBaseUrl: 'https://SERVER_IP:5601'
 server.ssl.enabled: true
-server.ssl.keystore.path: "/usr/share/kibana/config/kibana-01.p12"
+server.ssl.certificate: config/kibana.crt
+server.ssl.key: config/kibana.key
 elasticsearch.hosts:
   - https://ES-COORD-01-IP-ADDRESS:9200
 elasticsearch.username: kibana_system
 elasticsearch.password: abcde12345
 elasticsearch.ssl.verificationMode: full
-elasticsearch.ssl.certificateAuthorities:
-  - config/elastic-ca.pem
+elasticsearch.ssl.certificateAuthorities: [config/elastic-ca.crt]
 monitoring.ui.container.elasticsearch.enabled: false
 monitoring.cluster_alerts.email_notifications.email_address: myname@myorg.mydomain
 xpack.reporting.roles.enabled: false

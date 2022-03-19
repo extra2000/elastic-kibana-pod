@@ -40,11 +40,14 @@ spec:
     - mountPath: /usr/share/kibana/config/kibana.yml
       name: kibana-yml
       readOnly: true
-    - mountPath: /usr/share/kibana/config/elastic-ca.pem
-      name: kibana-ssl-ca
+    - mountPath: /usr/share/kibana/config/elastic-ca.crt
+      name: kibana-ssl-ca-crt
       readOnly: true
-    - mountPath: /usr/share/kibana/config/kibana.p12
-      name: kibana-ssl-http
+    - mountPath: /usr/share/kibana/config/kibana.crt
+      name: kibana-ssl-http-crt
+      readOnly: true
+    - mountPath: /usr/share/kibana/config/kibana.key
+      name: kibana-ssl-http-key
       readOnly: true
     - mountPath: /usr/share/kibana/config/kibana.keystore
       name: kibana-keystore
@@ -53,12 +56,15 @@ spec:
   - name: kibana-yml
     hostPath:
       path: ./configs/kibana.yml
-  - name: kibana-ssl-ca
+  - name: kibana-ssl-ca-crt
     hostPath:
-      path: ./secrets/elastic-ca.pem
-  - name: kibana-ssl-http
+      path: ./secrets/elastic-ca.crt
+  - name: kibana-ssl-http-crt
     hostPath:
-      path: ./secrets/certificate-bundle/kibana/kibana.p12
+      path: ./secrets/kibana.crt
+  - name: kibana-ssl-http-key
+    hostPath:
+      path: ./secrets/kibana.key
   - name: kibana-keystore
     hostPath:
       path: ./secrets/kibana.keystore
