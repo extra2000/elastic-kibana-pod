@@ -104,5 +104,5 @@ Generate ``systemd`` files and enable on ``boot``:
 
     mkdir -pv ~/.config/systemd/user
     cd ~/.config/systemd/user
-    podman generate systemd --files --name kibana-pod
-    systemctl --user enable pod-kibana-pod.service container-kibana-pod-srv01.service
+    podman generate systemd --files --name kibana-pod-srv01
+    systemctl --user enable container-kibana-pod-srv01.service
