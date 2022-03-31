@@ -1,5 +1,30 @@
 # Changelog
 
+## [5.0.0](https://github.com/extra2000/elastic-kibana-pod/compare/v4.0.0...v5.0.0) (2022-03-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* **pod:** keystore file is no longer externalized
+* **pod:** SSL certs type and mount points have changed
+* **deployments:** SSL cert instructions has been removed and replaced with OpenSSL commands from `elastic-elasticsearch-pod` docs
+
+### Features
+
+* **dockerfiles:** upgrade Kibana from verison `8.0.1` to `8.1.0` ([5da0f72](https://github.com/extra2000/elastic-kibana-pod/commit/5da0f72646e4d78146a7cd720e46221da5d7140a))
+
+
+### Code Refactoring
+
+* **pod:** mount the whole config instead of keystore ([3634e64](https://github.com/extra2000/elastic-kibana-pod/commit/3634e648df9131d8a626dcc1a1499d904eb031af))
+* **pod:** simplify certs to PEM via OpenSSL ([ed7c9f5](https://github.com/extra2000/elastic-kibana-pod/commit/ed7c9f548bc549fa9dd75993e6c262b7e89bb645))
+
+
+### Documentations
+
+* **deployments:** remove SSL cert instructions ([d4ddd3b](https://github.com/extra2000/elastic-kibana-pod/commit/d4ddd3bd7549bf1d352bd477cab4ebf9624f510b))
+* **pod:** add `runAsUser` as comment ([d9f810c](https://github.com/extra2000/elastic-kibana-pod/commit/d9f810c47e00fa73055bb9a56eb277501d39e38c))
+
 ## [4.0.0](https://github.com/extra2000/elastic-kibana-pod/compare/v3.3.0...v4.0.0) (2022-03-10)
 
 
