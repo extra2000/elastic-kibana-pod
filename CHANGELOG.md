@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.1.0](https://github.com/extra2000/elastic-kibana-pod/compare/v5.0.0...v5.1.0) (2022-03-31)
+
+
+### Features
+
+* **dockerfile:** update Kibana from `8.1.0` to `8.1.1` ([f2a9c10](https://github.com/extra2000/elastic-kibana-pod/commit/f2a9c1024d46b3447a36f047dc95d4f2904d7e79))
+
+
+### Documentations
+
+* **deployment:** simplify `podman generate systemd` ([0a33b22](https://github.com/extra2000/elastic-kibana-pod/commit/0a33b225b8bcbe5a4e85d81e21d21b5e7d8ab79e))
+
 ## [5.0.0](https://github.com/extra2000/elastic-kibana-pod/compare/v4.0.0...v5.0.0) (2022-03-31)
 
 
