@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.2.0](https://github.com/extra2000/elastic-kibana-pod/compare/v5.1.0...v5.2.0) (2022-04-02)
+
+
+### Features
+
+* **dockerfile:** update Kibana from `8.1.1` to `8.1.2` ([8ca4cdf](https://github.com/extra2000/elastic-kibana-pod/commit/8ca4cdf2749f2ad1ff1ac8463fcf8fdecd8b1855))
+
 ## [5.1.0](https://github.com/extra2000/elastic-kibana-pod/compare/v5.0.0...v5.1.0) (2022-03-31)
 
 
