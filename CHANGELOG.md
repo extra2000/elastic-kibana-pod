@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.4.0](https://github.com/extra2000/elastic-kibana-pod/compare/v5.3.0...v5.4.0) (2022-05-25)
+
+
+### Features
+
+* **dockerfiles:** upgrade Kibana from `8.2.0` to `8.2.1` ([125678b](https://github.com/extra2000/elastic-kibana-pod/commit/125678bb0f2521ab385481203650b8c7a82c3490))
+
+
+### Continuous Integrations
+
+* **AppVeyor:** disable test due to Kubic broken mirror ([5177f1d](https://github.com/extra2000/elastic-kibana-pod/commit/5177f1dbf73ed56cc95013dcf285da69d7ed4e01))
+
 ## [5.3.0](https://github.com/extra2000/elastic-kibana-pod/compare/v5.2.0...v5.3.0) (2022-05-05)
 
 
